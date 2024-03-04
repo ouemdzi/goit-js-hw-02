@@ -35,7 +35,7 @@
 // Виклик getShippingCost("Sweden") повертає "Sorry, there is no delivery to your country"
 
 function getShippingCost(country) {
-  let price = 0;
+  let message;
   switch (country) {
     case 'Chile':
       message = `Shipping to ${country} will cost 250 credits`;
