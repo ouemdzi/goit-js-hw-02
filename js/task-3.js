@@ -31,15 +31,10 @@
 // Виклик функції checkForSpam("[SPAM] How to earn fast money?") повертає true
 
 function checkForSpam(message) {
-  // if (message.toLowerCase().includes('spam')) {
-  //   return Boolean(true);
-  // } else if (message.toLowerCase().includes('sale')) {
-  //   return Boolean(true);
-  // } else {
-  //   return Boolean(false);
-  // }
-  const normMessage = message.toLowerCase();
-  return normMessage.includes('sale') || normMessage.includes('spam');
+  const normalizedMessage = message.toLowerCase();
+  return (
+    normalizedMessage.includes('sale') || normalizedMessage.includes('spam')
+  );
 }
 console.log(checkForSpam('Latest technology news')); // false
 console.log(checkForSpam('JavaScript weekly newsletter')); // false
